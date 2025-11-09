@@ -1,0 +1,143 @@
+# Family Hobbies and Interests
+# Edit this file to update hobby information
+
+james_hobbies:
+  - name: "Coffee Brewing"
+    icon: "☕"
+    description: "Perfecting the art of pour-over coffee, one brew at a time"
+    level: "Advanced"
+    details: "From experimenting with different grind sizes to timing the perfect bloom, coffee brewing has become both a daily ritual and a passionate hobby. Currently exploring single-origin beans and refining my pour-over technique with a glass cone setup."
+    equipment:
+      - "Glass cone pour-over"
+      - "Burr grinder"
+      - "Gooseneck kettle"
+      - "Digital scale"
+    favorite_beans: "Ethiopian Yirgacheffe"
+    image: "/assets/images/hobbies/coffee-brewing.jpg"
+    
+  - name: "Tennis"
+    icon: "🎾"
+    description: "Playing competitively at 3.5 level and always improving"
+    level: "Intermediate (3.5 USTA)"
+    details: "Tennis provides the perfect combination of physical challenge, mental strategy, and social connection. Regular matches and tournament play keep me sharp and constantly improving. There's nothing quite like a well-executed passing shot or a perfect serve."
+    achievements:
+      - "3.5 USTA rating"
+      - "Local tournament participant"
+      - "Improving backhand consistency"
+    training: "3-4 times per week, mixture of practice and matches"
+    image: "/assets/images/hobbies/tennis.jpg"
+    
+  - name: "Kiteboarding & Sailing"
+    icon: "⛵"
+    description: "Harnessing the wind and waves of San Diego"
+    level: "Experienced"
+    details: "Living in San Diego means having access to some of the best wind and water conditions in the world. Whether it's flying across the bay on a kiteboard or the peaceful rhythm of sailing, being out on the water is where I feel most alive. The combination of technical skill, environmental awareness, and pure exhilaration never gets old."
+    favorite_spots:
+      - "Mission Bay for kiteboarding"
+      - "San Diego Bay for sailing"
+      - "La Jolla Shores for both"
+    conditions: "Best in afternoon winds, 15-25 knots"
+    image: "/assets/images/hobbies/kiteboarding.jpg"
+    
+  - name: "Technology & Building"
+    icon: "💻"
+    description: "Creating tools and solutions that make a difference"
+    level: "Expert"
+    details: "Beyond my day job, I love building tools that solve real problems. My latest project, CxPlots, automates building energy audits using AI and data analysis. There's something deeply satisfying about taking a complex problem and building an elegant solution that helps people work more efficiently."
+    projects:
+      - "CxPlots - Building Energy Audit Tool"
+      - "Personal automation scripts"
+      - "Home smart system optimization"
+    favorite_stack: "Python, data analysis, and automation"
+    image: "/assets/images/hobbies/technology.jpg"
+
+namibia_hobbies:
+  - name: "Arts & Crafts"
+    icon: "🎨"
+    description: "Creating beauty through handmade treasures"
+    level: "Skilled Artisan"
+    details: "There's magic in creating something beautiful with your own hands. From intricate jewelry designs to home decor pieces, each project is an opportunity to express creativity and make something unique. The process is meditative, and the results bring joy to both the maker and the recipient."
+    specialties:
+      - "Jewelry making"
+      - "Home decor"
+      - "Mixed media art"
+      - "Upcycled creations"
+    current_project: "Nursery art and decorations for baby"
+    image: "/assets/images/hobbies/arts-crafts.jpg"
+    
+  - name: "Salsa Dancing"
+    icon: "💃"
+    description: "Moving to the rhythm with passion and grace"
+    level: "Advanced"
+    details: "Salsa dancing is pure joy in motion. The music, the movement, the connection with your partner - it's all about being present in the moment and letting the rhythm guide you. Whether it's a social dance night or practicing new moves, every dance is a celebration."
+    styles:
+      - "Cuban Salsa"
+      - "LA Style"
+      - "Bachata"
+    favorite_venues: "Local San Diego salsa clubs and festivals"
+    dance_nights: "Weekly social dancing"
+    image: "/assets/images/hobbies/salsa.jpg"
+    
+  - name: "Reading & Literature"
+    icon: "📚"
+    description: "Exploring infinite worlds through the written word"
+    level: "Voracious Reader"
+    details: "Books are portals to infinite worlds, ideas, and perspectives. From literary fiction to spiritual texts, philosophy to poetry, reading is how I grow, learn, and find inspiration. There's nothing quite like getting lost in a great book."
+    favorite_genres:
+      - "Literary fiction"
+      - "Spiritual and philosophical texts"
+      - "Poetry"
+      - "Memoirs and biographies"
+    current_reading: "Always multiple books at once!"
+    book_club: "Monthly discussions with friends"
+    image: "/assets/images/hobbies/reading.jpg"
+    
+  - name: "Spirituality & Mindfulness"
+    icon: "🧘‍♀️"
+    description: "Deepening connection and understanding"
+    level: "Dedicated Practitioner"
+    details: "Spiritual exploration is a journey of continuous growth and discovery. Through meditation, mindfulness practices, and studying various wisdom traditions, I seek to deepen my understanding of life, connection, and purpose. It's about finding peace within and radiating that out into the world."
+    practices:
+      - "Daily meditation"
+      - "Mindfulness practices"
+      - "Yoga"
+      - "Nature connection"
+    inspiration: "Drawing from various spiritual traditions"
+    image: "/assets/images/hobbies/spirituality.jpg"
+
+shared_hobbies:
+  - name: "Home Projects"
+    description: "Making our space uniquely ours"
+    recent_projects:
+      - "Nursery preparation and decoration"
+      - "Garden revitalization"
+      - "Home organization systems"
+    image: "/assets/images/hobbies/home-projects.jpg"
+    
+  - name: "Cooking & Food Adventures"
+    description: "Exploring flavors and cuisines together"
+    specialties:
+      - "Weekend breakfast traditions"
+      - "Trying new restaurants"
+      - "Experimental cooking nights"
+    image: "/assets/images/hobbies/cooking.jpg"
+    
+  - name: "Beach Time with Dax"
+    description: "Our favorite family activity"
+    activities:
+      - "Sunset walks"
+      - "Beach fetch sessions"
+      - "Picnics and relaxation"
+    favorite_beaches:
+      - "Dog Beach in Ocean Beach"
+      - "Fiesta Island"
+      - "Coronado Beach"
+    image: "/assets/images/hobbies/beach-dax.jpg"
+
+# Hobby Stats
+hobby_stats:
+  james_weekly_hours: 15
+  namibia_weekly_hours: 12
+  shared_weekly_hours: 8
+  most_time_invested: "Coffee brewing (James), Arts & Crafts (Namibia)"
+  newest_hobby: "Baby preparation activities!"

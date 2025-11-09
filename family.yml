@@ -1,0 +1,93 @@
+# Family Member Information
+# Edit this file to update family bios and information
+
+members:
+  - name: "James Bell-Torres"
+    role: "Sustainability Expert & Engineer"
+    bio: "James is a passionate sustainability engineer at JLL, specializing in building automation systems and energy efficiency. When he's not optimizing HVAC systems, you'll find him on the tennis court, perfecting his pour-over coffee technique, or out on the water kiteboarding and sailing. His latest project, CxPlots, is revolutionizing building energy audits with AI-powered automation."
+    image: "/assets/images/family/james.jpg"
+    interests:
+      - name: "Coffee Brewing"
+        icon: "☕"
+        description: "Exploring the perfect pour-over technique"
+      - name: "Tennis"
+        icon: "🎾"
+        description: "Playing at 3.5 level and always improving"
+      - name: "Kiteboarding & Sailing"
+        icon: "⛵"
+        description: "Riding the waves and winds of San Diego"
+      - name: "Technology"
+        icon: "💻"
+        description: "Building tools that make a difference"
+    
+  - name: "Namibia Bell-Torres"
+    role: "Creative Spirit & Artist"
+    bio: "Namibia brings creativity and spirituality into everything she does. Whether she's crafting beautiful handmade pieces, dancing salsa with passion, or diving deep into spiritual exploration, she approaches life with curiosity and grace. Her love for reading opens new worlds, while her artistic talents bring beauty into our home and lives."
+    image: "/assets/images/family/namibia.jpg"
+    interests:
+      - name: "Arts & Crafts"
+        icon: "🎨"
+        description: "Creating beautiful handmade treasures"
+      - name: "Salsa Dancing"
+        icon: "💃"
+        description: "Moving to the rhythm with passion"
+      - name: "Reading"
+        icon: "📚"
+        description: "Exploring new worlds through books"
+      - name: "Spirituality"
+        icon: "🧘‍♀️"
+        description: "Deepening connection and understanding"
+
+  - name: "Dax Bell-Torres"
+    role: "Chief Happiness Officer"
+    bio: "Dax is our beloved black Labrador and official family mascot. This gentle giant has a heart of gold and endless enthusiasm for life. Whether he's greeting everyone with his signature wiggle, playing fetch at the beach, or supervising family activities, Dax brings joy and laughter to every moment. He's especially excited about his upcoming role as big brother!"
+    image: "/assets/images/family/dax.jpg"
+    interests:
+      - name: "Beach Adventures"
+        icon: "🏖️"
+        description: "Running through the San Diego surf"
+      - name: "Fetch Champion"
+        icon: "🎾"
+        description: "Never met a ball he didn't love"
+      - name: "Professional Napper"
+        icon: "😴"
+        description: "Expert at finding the best sunny spots"
+      - name: "Chief Greeter"
+        icon: "👋"
+        description: "Making everyone feel welcome"
+
+  - name: "Baby Bell-Torres"
+    role: "Coming Soon!"
+    bio: "Our newest family member is on the way! We can't wait to meet this little one and share all the adventures, love, and laughter that await. Stay tuned for updates as we prepare to welcome them into our family."
+    image: "/assets/images/family/baby-placeholder.jpg"
+    interests:
+      - name: "Growing"
+        icon: "🌱"
+        description: "Getting ready to meet the world"
+      - name: "Being Loved"
+        icon: "💕"
+        description: "Already so cherished"
+      - name: "Future Adventures"
+        icon: "🎈"
+        description: "So many experiences ahead"
+
+# Family Story (appears on About page)
+family_story: |
+  We're the Bell-Torres family, living our best life in sunny San Diego, California. Our story is one of adventure, passion, and continuous growth.
+  
+  James and Namibia met through their shared love of adventure and complementary passions - his analytical mind and her creative spirit creating the perfect balance. Together, we've built a life filled with meaningful work, exciting hobbies, and the kind of love that makes every day an adventure.
+  
+  Dax joined our family as a puppy and immediately claimed his spot as the heart of our home. His unconditional love and boundless enthusiasm remind us daily to find joy in the simple things - a good walk, a warm sunny spot, or quality time with the people you love.
+  
+  Now, as we prepare to welcome our first child, we're embarking on our greatest adventure yet. This website is our way of documenting the journey - the travels, the hobbies, the everyday moments that make life meaningful, and the big milestones that take our breath away.
+  
+  Thanks for stopping by our little corner of the internet. We hope our stories inspire you to embrace your own adventures, pursue your passions, and cherish the people (and pets!) who make life worth living.
+
+# Location
+location:
+  city: "San Diego"
+  state: "California"
+  description: "Living the coastal California dream with perfect weather year-round"
+  coordinates:
+    lat: 32.7157
+    lng: -117.1611

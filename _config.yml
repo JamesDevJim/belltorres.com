@@ -1,0 +1,91 @@
+# Jekyll Configuration for Bell-Torres Family Website
+
+# Site Settings
+title: "Bell-Torres Family"
+description: "Welcome to the Bell-Torres family website - sharing our adventures, hobbies, and life in San Diego"
+url: "https://belltorres.com"
+baseurl: ""
+
+# Author Information (used in blog posts and SEO)
+author:
+  name: "James & Namibia Bell-Torres"
+  email: "hello@belltorres.com"  # Update with your email
+
+# Build Settings
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Color Palette (Edit these hex codes to change site colors)
+# Use these variable names in your CSS as var(--primary-color)
+primary_color: "#2C5F7C"      # Deep ocean blue - main brand color
+secondary_color: "#F4A261"    # Warm sand orange - accents
+accent_color: "#E76F51"       # Coral red - highlights
+neutral_light: "#F8F9FA"      # Off-white background
+neutral_dark: "#2B2D42"       # Charcoal for text
+
+# Navigation Menu (Edit to add/remove pages)
+navigation:
+  - name: "Home"
+    url: "/"
+  - name: "About Us"
+    url: "/about/"
+  - name: "Travel"
+    url: "/travel/"
+  - name: "Hobbies"
+    url: "/hobbies/"
+  - name: "Gallery"
+    url: "/gallery/"
+  - name: "Blog"
+    url: "/blog/"
+
+# Social Links (Add your social media handles)
+social:
+  instagram: ""  # Add your Instagram handle (without @)
+  facebook: ""   # Add your Facebook username
+  twitter: ""    # Add your Twitter handle (without @)
+  linkedin: ""   # Add LinkedIn profile URL
+  email: "hello@belltorres.com"  # Contact email
+
+# Google Analytics (Optional - add your tracking ID)
+google_analytics: ""  # Example: UA-XXXXXXXXX-X
+
+# SEO Settings
+locale: "en_US"
+timezone: "America/Los_Angeles"  # San Diego timezone
+
+# Pagination (for blog)
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Syntax highlighting
+highlighter: rouge

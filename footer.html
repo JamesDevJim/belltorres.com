@@ -1,0 +1,73 @@
+<!-- Site Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <!-- Footer Content Grid -->
+        <div class="footer-grid">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>{{ site.title }}</h3>
+                <p>{{ site.description }}</p>
+                <p class="location">📍 {{ site.author.name }}<br>San Diego, California</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    {% for item in site.navigation %}
+                    <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- Connect Section -->
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    {% if site.social.email %}
+                    <a href="mailto:{{ site.social.email }}" aria-label="Email" title="Email">
+                        📧
+                    </a>
+                    {% endif %}
+                    
+                    {% if site.social.instagram %}
+                    <a href="https://instagram.com/{{ site.social.instagram }}" 
+                       target="_blank" 
+                       rel="noopener" 
+                       aria-label="Instagram"
+                       title="Instagram">
+                        📷
+                    </a>
+                    {% endif %}
+                    
+                    {% if site.social.facebook %}
+                    <a href="https://facebook.com/{{ site.social.facebook }}" 
+                       target="_blank" 
+                       rel="noopener" 
+                       aria-label="Facebook"
+                       title="Facebook">
+                        👥
+                    </a>
+                    {% endif %}
+                    
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" 
+                       target="_blank" 
+                       rel="noopener" 
+                       aria-label="LinkedIn"
+                       title="LinkedIn">
+                        💼
+                    </a>
+                    {% endif %}
+                </div>
+                <p class="footer-note">Follow our adventures!</p>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with ❤️ in San Diego.</p>
+            <p class="credits">Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></p>
+        </div>
+    </div>
+</footer>

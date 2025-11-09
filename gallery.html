@@ -1,0 +1,171 @@
+---
+layout: page
+title: Photo Gallery
+subtitle: Capturing life's moments, big and small
+permalink: /gallery/
+---
+
+<!-- Introduction -->
+<div class="container-narrow" style="text-align: center; margin-bottom: var(--spacing-xl);">
+    <p style="font-size: 1.2rem; color: var(--gray-700); line-height: 1.8;">
+        Every photo tells a story. Here's a collection of our favorite moments—from everyday life to 
+        extraordinary adventures. Click on any category to filter the gallery.
+    </p>
+</div>
+
+<!-- Gallery Filters -->
+<div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    {% for category in site.data.gallery.categories %}
+    {% unless category.id == 'all' %}
+    <button class="filter-btn" data-filter="{{ category.id }}">{{ category.name }}</button>
+    {% endunless %}
+    {% endfor %}
+</div>
+
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+    {% for photo in site.data.gallery.photos %}
+    <div class="gallery-item" data-category="{{ photo.category }}" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" loading="lazy">
+        <div class="gallery-caption">
+            <p style="margin: 0; font-weight: 600;">{{ photo.caption }}</p>
+            <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">{{ photo.date | date: "%B %d, %Y" }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Category Descriptions -->
+<div class="content-section" style="margin-top: var(--spacing-xxl); background: var(--neutral-light); padding: var(--spacing-xl) 0;">
+    <div class="container">
+        <h2 class="section-title">Gallery Categories</h2>
+        <div class="card-grid">
+            {% for category in site.data.gallery.categories %}
+            {% unless category.id == 'all' %}
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="card-title">{{ category.name }}</h3>
+                    <p style="margin: 0; color: var(--gray-700);">{{ category.description }}</p>
+                </div>
+            </div>
+            {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- How to Add Photos Section -->
+<div class="content-section">
+    <div class="container-narrow" style="background: var(--primary-color); color: var(--white); padding: var(--spacing-lg); border-radius: var(--border-radius); text-align: center;">
+        <h3 style="color: var(--white); margin-bottom: var(--spacing-md);">📸 Want to Add More Photos?</h3>
+        <p style="opacity: 0.95; margin-bottom: var(--spacing-md);">
+            Adding photos to this gallery is easy! Just upload your image to the <code style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.5rem; border-radius: 4px;">/assets/images/gallery/</code> folder and add an entry to the <code style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.5rem; border-radius: 4px;">_data/gallery.yml</code> file.
+        </p>
+        <p style="opacity: 0.95; margin: 0;">
+            Check the README file for detailed instructions on managing the gallery.
+        </p>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="content-section" style="padding-top: var(--spacing-xl);">
+    <div class="container">
+        <h2 class="section-title">Gallery Stats</h2>
+        <div class="card-grid">
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.gallery.photos | size }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600;">Total Photos</p>
+                </div>
+            </div>
+            
+            {% assign family_count = 0 %}
+            {% assign travel_count = 0 %}
+            {% assign dax_count = 0 %}
+            {% assign hobbies_count = 0 %}
+            {% for photo in site.data.gallery.photos %}
+                {% if photo.category == 'family' %}
+                    {% assign family_count = family_count | plus: 1 %}
+                {% elsif photo.category == 'travel' %}
+                    {% assign travel_count = travel_count | plus: 1 %}
+                {% elsif photo.category == 'dax' %}
+                    {% assign dax_count = dax_count | plus: 1 %}
+                {% elsif photo.category == 'hobbies' %}
+                    {% assign hobbies_count = hobbies_count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: var(--spacing-sm);">
+                        {{ family_count }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600;">Family Moments</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);">
+                        {{ dax_count }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600;">Dax Photos 🐕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="content-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); padding: var(--spacing-xl) 0; text-align: center;">
+    <div class="container-narrow">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">Read the Stories Behind the Photos</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Want to know more about these moments? Check out our blog for detailed stories and experiences.
+        </p>
+        <a href="{{ '/blog/' | relative_url }}" class="btn btn-primary btn-large">Read Our Blog</a>
+    </div>
+</div>
+
+<!-- JavaScript for Gallery Filtering -->
+<script>
+// This script is already included in main.js, but adding here for reference
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+});
+</script>

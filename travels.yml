@@ -1,0 +1,101 @@
+# Travel Adventures Data
+# Add new destinations by adding entries to this file
+
+destinations:
+  - location: "Big Sur, California"
+    country: "USA"
+    date: "October 2025"
+    image: "/assets/images/travel/bigsur-hero.jpg"
+    description: "Breathtaking coastal drives, towering redwoods, and incredible hiking trails. We spent a long weekend exploring the rugged beauty of California's central coast."
+    highlights:
+      - "Hiking in Julia Pfeiffer Burns State Park"
+      - "Watching sunset at Bixby Bridge"
+      - "Camping under the stars"
+      - "Dax's first redwood forest experience"
+    photos:
+      - "/assets/images/travel/bigsur-1.jpg"
+      - "/assets/images/travel/bigsur-2.jpg"
+      - "/assets/images/travel/bigsur-3.jpg"
+    favorite_memory: "Watching Dax discover the redwoods - his excitement was contagious!"
+    
+  - location: "Joshua Tree National Park"
+    country: "USA"
+    date: "August 2025"
+    image: "/assets/images/travel/joshuatree-hero.jpg"
+    description: "Desert landscapes, incredible rock formations, and some of the best stargazing we've ever experienced. A perfect blend of adventure and tranquility."
+    highlights:
+      - "Sunrise at Cholla Cactus Garden"
+      - "Rock climbing at Hidden Valley"
+      - "Stargazing and night photography"
+      - "Desert wildflowers in bloom"
+    photos:
+      - "/assets/images/travel/joshuatree-1.jpg"
+      - "/assets/images/travel/joshuatree-2.jpg"
+      - "/assets/images/travel/joshuatree-3.jpg"
+    favorite_memory: "The complete silence and endless stars at night - no light pollution for miles"
+    
+  - location: "Portland, Oregon"
+    country: "USA"
+    date: "June 2025"
+    image: "/assets/images/travel/portland-hero.jpg"
+    description: "Exploring the city of roses, amazing coffee culture, and incredible food scene. Plus day trips to the Columbia River Gorge for waterfall adventures."
+    highlights:
+      - "Coffee shop crawl through downtown"
+      - "Multnomah Falls hike"
+      - "Powell's Books bookstore adventure"
+      - "Food cart extravaganza"
+    photos:
+      - "/assets/images/travel/portland-1.jpg"
+      - "/assets/images/travel/portland-2.jpg"
+      - "/assets/images/travel/portland-3.jpg"
+    favorite_memory: "James geeking out over the coffee roasting techniques at Heart Coffee"
+    
+  - location: "Mammoth Lakes, California"
+    country: "USA"
+    date: "February 2025"
+    image: "/assets/images/travel/mammoth-hero.jpg"
+    description: "Winter wonderland adventure with skiing, hot springs, and cozy mountain lodges. Our first mountain trip as a family of almost-four!"
+    highlights:
+      - "Skiing at Mammoth Mountain"
+      - "Soaking in Wild Willy's Hot Springs"
+      - "Winter hiking around the lakes"
+      - "Snow play with Dax"
+    photos:
+      - "/assets/images/travel/mammoth-1.jpg"
+      - "/assets/images/travel/mammoth-2.jpg"
+      - "/assets/images/travel/mammoth-3.jpg"
+    favorite_memory: "Dax's first time seeing snow - pure joy and confusion!"
+
+# Future Travel Dreams
+bucket_list:
+  - location: "Iceland"
+    reason: "Northern lights, hot springs, and dramatic landscapes"
+    priority: "high"
+    
+  - location: "New Zealand"
+    reason: "Outdoor adventures and stunning natural beauty"
+    priority: "high"
+    
+  - location: "Japan"
+    reason: "Culture, food, and James's coffee dreams"
+    priority: "high"
+    
+  - location: "Costa Rica"
+    reason: "Surfing, wildlife, and eco-adventures with baby"
+    priority: "medium"
+    
+  - location: "Italy"
+    reason: "Art, food, and la dolce vita"
+    priority: "medium"
+    
+  - location: "Norway"
+    reason: "Fjords, hiking, and Scandinavian design"
+    priority: "medium"
+
+# Travel Stats
+stats:
+  states_visited: 28
+  countries_visited: 12
+  national_parks: 15
+  favorite_travel_style: "Road trips with spontaneous stops"
+  dax_favorite_destination: "Anywhere with a beach!"

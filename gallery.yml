@@ -1,0 +1,95 @@
+# Photo Gallery Data
+# Add new photos by adding entries to this file
+# Categories: family, travel, dax, hobbies, home, special
+
+photos:
+  - image: "/assets/images/gallery/family-portrait-1.jpg"
+    caption: "Family portrait at Sunset Cliffs"
+    category: "family"
+    date: "2025-10-15"
+    featured: true
+    
+  - image: "/assets/images/gallery/dax-beach-1.jpg"
+    caption: "Dax loving life at the beach"
+    category: "dax"
+    date: "2025-09-20"
+    
+  - image: "/assets/images/gallery/travel-mountains.jpg"
+    caption: "Mountain adventure weekend"
+    category: "travel"
+    date: "2025-08-10"
+    
+  - image: "/assets/images/gallery/coffee-brewing.jpg"
+    caption: "Perfect Sunday morning pour-over"
+    category: "hobbies"
+    date: "2025-11-01"
+    
+  - image: "/assets/images/gallery/salsa-night.jpg"
+    caption: "Salsa dancing date night"
+    category: "hobbies"
+    date: "2025-10-28"
+    
+  - image: "/assets/images/gallery/kiteboarding.jpg"
+    caption: "James kiteboarding in San Diego Bay"
+    category: "hobbies"
+    date: "2025-09-15"
+    
+  - image: "/assets/images/gallery/family-dinner.jpg"
+    caption: "Sunday family dinner"
+    category: "family"
+    date: "2025-11-05"
+    
+  - image: "/assets/images/gallery/dax-nap.jpg"
+    caption: "Professional napping skills on display"
+    category: "dax"
+    date: "2025-10-30"
+    
+  - image: "/assets/images/gallery/crafts-project.jpg"
+    caption: "Namibia's latest arts and crafts creation"
+    category: "hobbies"
+    date: "2025-10-22"
+    
+  - image: "/assets/images/gallery/tennis-match.jpg"
+    caption: "Tennis tournament weekend"
+    category: "hobbies"
+    date: "2025-09-30"
+    
+  - image: "/assets/images/gallery/baby-prep.jpg"
+    caption: "Getting the nursery ready!"
+    category: "family"
+    date: "2025-11-08"
+    
+  - image: "/assets/images/gallery/sunset-walk.jpg"
+    caption: "Evening walk with Dax at the beach"
+    category: "family"
+    date: "2025-10-18"
+
+# Gallery Categories (for filtering)
+categories:
+  - id: "all"
+    name: "All Photos"
+    description: "Every moment captured"
+    
+  - id: "family"
+    name: "Family"
+    description: "Our favorite people moments"
+    
+  - id: "travel"
+    name: "Travel"
+    description: "Adventures near and far"
+    
+  - id: "dax"
+    name: "Dax"
+    description: "Our furry family member"
+    
+  - id: "hobbies"
+    name: "Hobbies"
+    description: "Pursuing our passions"
+    
+  - id: "home"
+    name: "Home"
+    description: "Life at home in San Diego"
+    
+  - id: "special"
+    name: "Special Occasions"
+    description: "Celebrating life's milestones"

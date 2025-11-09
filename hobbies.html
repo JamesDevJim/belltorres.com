@@ -1,0 +1,314 @@
+---
+layout: page
+title: Our Hobbies & Passions
+subtitle: What we love to do when we're not working
+permalink: /hobbies/
+---
+
+<!-- Introduction -->
+<div class="container-narrow" style="text-align: center; margin-bottom: var(--spacing-xl);">
+    <p style="font-size: 1.2rem; color: var(--gray-700); line-height: 1.8;">
+        Life is too short to not pursue your passions. From coffee brewing to crafting, tennis to dancing, 
+        we believe in making time for the things that bring us joy and help us grow. Here's what keeps us 
+        busy and fulfilled outside of work.
+    </p>
+</div>
+
+<!-- James's Hobbies -->
+<div class="content-section">
+    <h2 class="section-title">James's Passions</h2>
+    
+    <div class="card-grid">
+        {% for hobby in site.data.hobbies.james_hobbies %}
+        <div class="card">
+            <img src="{{ hobby.image | relative_url }}" alt="{{ hobby.name }}" class="card-image" loading="lazy">
+            <div class="card-content">
+                <h3 class="card-title">{{ hobby.icon }} {{ hobby.name }}</h3>
+                <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                    Level: {{ hobby.level }}
+                </p>
+                <p class="card-text">{{ hobby.description }}</p>
+                <p style="margin-bottom: var(--spacing-md);">{{ hobby.details }}</p>
+                
+                {% if hobby.equipment %}
+                <div style="margin-bottom: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Equipment:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for item in hobby.equipment %}
+                        <li style="font-size: 0.95rem;">{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.achievements %}
+                <div style="margin-bottom: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Achievements:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for achievement in hobby.achievements %}
+                        <li style="font-size: 0.95rem;">{{ achievement }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.favorite_beans %}
+                <p style="margin: 0; font-size: 0.95rem;">
+                    <strong>Favorite Beans:</strong> {{ hobby.favorite_beans }}
+                </p>
+                {% endif %}
+                
+                {% if hobby.training %}
+                <p style="margin: 0; font-size: 0.95rem;">
+                    <strong>Training Schedule:</strong> {{ hobby.training }}
+                </p>
+                {% endif %}
+                
+                {% if hobby.favorite_spots %}
+                <div style="margin-top: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Favorite Spots:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for spot in hobby.favorite_spots %}
+                        <li style="font-size: 0.95rem;">{{ spot }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.projects %}
+                <div style="margin-top: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Current Projects:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for project in hobby.projects %}
+                        <li style="font-size: 0.95rem;">{{ project }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Namibia's Hobbies -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0; margin-top: var(--spacing-xxl);">
+    <div class="container">
+        <h2 class="section-title">Namibia's Passions</h2>
+        
+        <div class="card-grid">
+            {% for hobby in site.data.hobbies.namibia_hobbies %}
+            <div class="card">
+                <img src="{{ hobby.image | relative_url }}" alt="{{ hobby.name }}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">{{ hobby.icon }} {{ hobby.name }}</h3>
+                    <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                        Level: {{ hobby.level }}
+                    </p>
+                    <p class="card-text">{{ hobby.description }}</p>
+                    <p style="margin-bottom: var(--spacing-md);">{{ hobby.details }}</p>
+                    
+                    {% if hobby.specialties %}
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--secondary-color);">Specialties:</strong>
+                        <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                            {% for specialty in hobby.specialties %}
+                            <li style="font-size: 0.95rem;">{{ specialty }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if hobby.styles %}
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--secondary-color);">Dance Styles:</strong>
+                        <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                            {% for style in hobby.styles %}
+                            <li style="font-size: 0.95rem;">{{ style }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if hobby.favorite_genres %}
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--secondary-color);">Favorite Genres:</strong>
+                        <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                            {% for genre in hobby.favorite_genres %}
+                            <li style="font-size: 0.95rem;">{{ genre }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if hobby.practices %}
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <strong style="color: var(--secondary-color);">Practices:</strong>
+                        <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                            {% for practice in hobby.practices %}
+                            <li style="font-size: 0.95rem;">{{ practice }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if hobby.current_project %}
+                    <p style="margin-top: var(--spacing-sm); font-size: 0.95rem; font-style: italic;">
+                        <strong>Current Project:</strong> {{ hobby.current_project }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if hobby.dance_nights %}
+                    <p style="margin: 0; font-size: 0.95rem;">
+                        <strong>Dance Schedule:</strong> {{ hobby.dance_nights }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if hobby.current_reading %}
+                    <p style="margin: 0; font-size: 0.95rem;">
+                        <strong>Currently:</strong> {{ hobby.current_reading }}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Shared Hobbies -->
+<div class="content-section">
+    <h2 class="section-title">Things We Love Doing Together</h2>
+    
+    <div class="card-grid">
+        {% for hobby in site.data.hobbies.shared_hobbies %}
+        <div class="card">
+            <img src="{{ hobby.image | relative_url }}" alt="{{ hobby.name }}" class="card-image" loading="lazy">
+            <div class="card-content">
+                <h3 class="card-title">{{ hobby.name }}</h3>
+                <p class="card-text">{{ hobby.description }}</p>
+                
+                {% if hobby.activities %}
+                <div style="margin-top: var(--spacing-md);">
+                    <strong style="color: var(--primary-color);">Activities:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for activity in hobby.activities %}
+                        <li style="font-size: 0.95rem;">{{ activity }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.favorite_beaches %}
+                <div style="margin-top: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Favorite Spots:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for beach in hobby.favorite_beaches %}
+                        <li style="font-size: 0.95rem;">{{ beach }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.recent_projects %}
+                <div style="margin-top: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Recent Projects:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for project in hobby.recent_projects %}
+                        <li style="font-size: 0.95rem;">{{ project }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if hobby.specialties %}
+                <div style="margin-top: var(--spacing-sm);">
+                    <strong style="color: var(--primary-color);">Specialties:</strong>
+                    <ul style="margin: var(--spacing-xs) 0; padding-left: 1.5rem;">
+                        {% for specialty in hobby.specialties %}
+                        <li style="font-size: 0.95rem;">{{ specialty }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Hobby Stats -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0; margin-top: var(--spacing-xxl);">
+    <div class="container">
+        <h2 class="section-title">By the Numbers</h2>
+        <div class="card-grid">
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.hobbies.hobby_stats.james_weekly_hours }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">Hours/Week</p>
+                    <p style="color: var(--gray-600); margin: 0; font-size: 0.95rem;">James dedicates to hobbies</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.hobbies.hobby_stats.namibia_weekly_hours }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">Hours/Week</p>
+                    <p style="color: var(--gray-600); margin: 0; font-size: 0.95rem;">Namibia dedicates to hobbies</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.hobbies.hobby_stats.shared_weekly_hours }}
+                    </h3>
+                    <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">Hours/Week</p>
+                    <p style="color: var(--gray-600); margin: 0; font-size: 0.95rem;">Quality time together</p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: var(--spacing-lg); font-style: italic; color: var(--gray-600);">
+            <strong>Newest Hobby:</strong> {{ site.data.hobbies.hobby_stats.newest_hobby }}
+        </p>
+    </div>
+</div>
+
+<!-- Philosophy Section -->
+<div class="content-section">
+    <div class="container-narrow" style="text-align: center;">
+        <h2 class="section-title">Why Hobbies Matter</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: var(--spacing-lg);">
+            In our busy lives, it would be easy to let hobbies fall by the wayside. But we've learned that 
+            pursuing our passions isn't just about having fun (though that's important!)—it's about personal 
+            growth, stress relief, skill development, and maintaining a sense of identity beyond our work and 
+            family roles. Whether it's the meditative focus of coffee brewing, the physical challenge of tennis, 
+            the creative expression of crafting, or the spiritual depth of mindfulness practices, our hobbies 
+            make us better, more fulfilled people.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray-700);">
+            Plus, they give us amazing things to share with each other and with our future child. We can't wait 
+            to introduce them to all the things we love!
+        </p>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="content-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); padding: var(--spacing-xl) 0; text-align: center;">
+    <div class="container-narrow">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">See Our Hobbies in Action</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Check out our photo gallery for pictures of our adventures, or read our blog for detailed stories 
+            about our hobby projects and experiences.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+            <a href="{{ '/gallery/' | relative_url }}" class="btn btn-primary btn-large">View Gallery</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-large">Read Stories</a>
+        </div>
+    </div>
+</div>

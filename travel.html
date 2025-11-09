@@ -1,0 +1,186 @@
+---
+layout: page
+title: Travel Adventures
+subtitle: Exploring the world, one journey at a time
+permalink: /travel/
+---
+
+<!-- Introduction -->
+<div class="container-narrow" style="text-align: center; margin-bottom: var(--spacing-xl);">
+    <p style="font-size: 1.2rem; color: var(--gray-700); line-height: 1.8;">
+        We believe that travel isn't just about seeing new places—it's about collecting experiences, 
+        connecting with different cultures, and creating memories that last a lifetime. Here are some 
+        of our favorite adventures so far.
+    </p>
+</div>
+
+<!-- Travel Stats -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-xl);">
+    <div class="card-grid">
+        <div style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: var(--spacing-xs);">
+                {{ site.data.travels.stats.states_visited }}
+            </h3>
+            <p style="font-weight: 600;">States Visited</p>
+        </div>
+        <div style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: var(--spacing-xs);">
+                {{ site.data.travels.stats.countries_visited }}
+            </h3>
+            <p style="font-weight: 600;">Countries Explored</p>
+        </div>
+        <div style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: var(--spacing-xs);">
+                {{ site.data.travels.stats.national_parks }}
+            </h3>
+            <p style="font-weight: 600;">National Parks</p>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: var(--spacing-md); font-style: italic; color: var(--gray-600);">
+        Travel Style: {{ site.data.travels.stats.favorite_travel_style }}
+    </p>
+</div>
+
+<!-- Destinations -->
+<div class="content-section">
+    <h2 class="section-title">Our Adventures</h2>
+    
+    {% for destination in site.data.travels.destinations %}
+    <div class="card" style="margin-bottom: var(--spacing-xl); overflow: visible;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+            <div style="order: {% cycle '1', '2' %};">
+                <img src="{{ destination.image | relative_url }}" 
+                     alt="{{ destination.location }}" 
+                     style="width: 100%; height: 100%; object-fit: cover; min-height: 400px;"
+                     loading="lazy">
+            </div>
+            <div style="padding: var(--spacing-lg); order: {% cycle '2', '1' %};">
+                <h3 style="margin-bottom: var(--spacing-sm);">{{ destination.location }}</h3>
+                <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-md);">
+                    📍 {{ destination.country }} | 📅 {{ destination.date }}
+                </p>
+                <p style="margin-bottom: var(--spacing-md);">{{ destination.description }}</p>
+                
+                {% if destination.highlights %}
+                <div style="margin-bottom: var(--spacing-md);">
+                    <h4 style="font-size: 1.1rem; color: var(--primary-color); margin-bottom: var(--spacing-sm);">
+                        ✨ Highlights
+                    </h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        {% for highlight in destination.highlights %}
+                        <li style="margin-bottom: var(--spacing-xs); padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">•</span>
+                            {{ highlight }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if destination.favorite_memory %}
+                <div style="background: var(--neutral-light); padding: var(--spacing-md); border-radius: var(--border-radius); border-left: 4px solid var(--secondary-color);">
+                    <p style="margin: 0; font-style: italic;">
+                        <strong>Favorite Memory:</strong> {{ destination.favorite_memory }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        {% if destination.photos %}
+        <div style="padding: var(--spacing-md); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm);">
+            {% for photo in destination.photos limit:3 %}
+            <img src="{{ photo | relative_url }}" 
+                 alt="{{ destination.location }}" 
+                 style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--border-radius);"
+                 loading="lazy">
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Bucket List -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0; margin-top: var(--spacing-xxl);">
+    <div class="container">
+        <h2 class="section-title">Dream Destinations</h2>
+        <p style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--gray-700);">
+            Places we can't wait to explore together
+        </p>
+        
+        <div class="card-grid">
+            {% for destination in site.data.travels.bucket_list %}
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">{{ destination.location }}</h3>
+                    <p class="card-text">{{ destination.reason }}</p>
+                    <p style="margin: 0;">
+                        <span style="display: inline-block; padding: 0.25rem 0.75rem; background: 
+                            {% if destination.priority == 'high' %}var(--accent-color)
+                            {% else %}var(--secondary-color)
+                            {% endif %}; 
+                            color: var(--white); border-radius: 15px; font-size: 0.85rem;">
+                            {{ destination.priority | capitalize }} Priority
+                        </span>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Travel Philosophy -->
+<div class="content-section">
+    <div class="container-narrow" style="text-align: center;">
+        <h2 class="section-title">Our Travel Philosophy</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); text-align: left;">
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🌍 Authentic Experiences</h3>
+                <p>We seek out local experiences and hidden gems rather than just tourist attractions.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🎒 Sustainable Travel</h3>
+                <p>We travel responsibly, minimizing our environmental impact and supporting local communities.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">📸 Moment Collectors</h3>
+                <p>We capture memories but also put the camera down to fully experience each place.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🐕 Dax-Friendly</h3>
+                <p>Whenever possible, we choose adventures that Dax can join—because family travels together!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="content-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); padding: var(--spacing-xl) 0; text-align: center;">
+    <div class="container-narrow">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">Follow Our Journey</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Check out our photo gallery for more travel memories, or read our blog for detailed trip stories and tips.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+            <a href="{{ '/gallery/' | relative_url }}" class="btn btn-primary btn-large">View Gallery</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-large">Read Travel Stories</a>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Responsive Fix for Two-Column Layout -->
+<style>
+@media (max-width: 768px) {
+    .card > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+    .card > div > div {
+        order: 1 !important;
+    }
+    .card > div > div img {
+        min-height: 250px !important;
+    }
+}
+</style>

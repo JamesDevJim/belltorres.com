@@ -1,0 +1,188 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Family</h1>
+        <p class="subtitle">The Bell-Torres Family - Living, loving, and adventuring in San Diego</p>
+        <div class="hero-buttons">
+            <a href="{{ '/about/' | relative_url }}" class="btn btn-primary btn-large">Meet the Family</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-large">Read Our Stories</a>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Intro Section -->
+<section class="content-section">
+    <div class="container-narrow">
+        <h2 class="section-title">Our Little Corner of the World</h2>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--gray-700);">
+            We're James, Namibia, our beloved lab Dax, and our little one on the way. We're a family passionate about 
+            sustainability, creativity, adventure, and making the most of every moment. From the mountains to the 
+            ocean, from coffee brewing to salsa dancing, we believe life is meant to be lived fully.
+        </p>
+    </div>
+</section>
+
+<!-- Featured Family Members -->
+<section class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0;">
+    <div class="container">
+        <h2 class="section-title">The Family</h2>
+        <div class="card-grid">
+            {% for member in site.data.family.members limit:3 %}
+            <div class="card">
+                <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">{{ member.name }}</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">{{ member.role }}</p>
+                    <p class="card-text">{{ member.bio | truncatewords: 30 }}</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                        {% for interest in member.interests limit:3 %}
+                        <span style="font-size: 1.5rem;" title="{{ interest.description }}">{{ interest.icon }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">Learn More About Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Travel Highlight -->
+<section class="content-section">
+    <div class="container">
+        <h2 class="section-title">Recent Adventures</h2>
+        <div class="card-grid">
+            {% for destination in site.data.travels.destinations limit:3 %}
+            <div class="card">
+                <img src="{{ destination.image | relative_url }}" alt="{{ destination.location }}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">{{ destination.location }}</h3>
+                    <p class="card-meta">
+                        <span>📍 {{ destination.country }}</span>
+                        <span>📅 {{ destination.date }}</span>
+                    </p>
+                    <p class="card-text">{{ destination.description | truncatewords: 25 }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="{{ '/travel/' | relative_url }}" class="btn btn-primary">Explore All Adventures</a>
+        </div>
+    </div>
+</section>
+
+<!-- Hobbies Highlight -->
+<section class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0;">
+    <div class="container">
+        <h2 class="section-title">Our Passions</h2>
+        <div class="card-grid">
+            <!-- James's Coffee -->
+            <div class="card">
+                <img src="{{ site.data.hobbies.james_hobbies[0].image | relative_url }}" 
+                     alt="{{ site.data.hobbies.james_hobbies[0].name }}" 
+                     class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        {{ site.data.hobbies.james_hobbies[0].icon }} 
+                        {{ site.data.hobbies.james_hobbies[0].name }}
+                    </h3>
+                    <p class="card-text">{{ site.data.hobbies.james_hobbies[0].description }}</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-600);">
+                        <strong>Level:</strong> {{ site.data.hobbies.james_hobbies[0].level }}
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Namibia's Arts -->
+            <div class="card">
+                <img src="{{ site.data.hobbies.namibia_hobbies[0].image | relative_url }}" 
+                     alt="{{ site.data.hobbies.namibia_hobbies[0].name }}" 
+                     class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        {{ site.data.hobbies.namibia_hobbies[0].icon }} 
+                        {{ site.data.hobbies.namibia_hobbies[0].name }}
+                    </h3>
+                    <p class="card-text">{{ site.data.hobbies.namibia_hobbies[0].description }}</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-600);">
+                        <strong>Level:</strong> {{ site.data.hobbies.namibia_hobbies[0].level }}
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Shared Hobby -->
+            <div class="card">
+                <img src="{{ site.data.hobbies.shared_hobbies[2].image | relative_url }}" 
+                     alt="{{ site.data.hobbies.shared_hobbies[2].name }}" 
+                     class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">{{ site.data.hobbies.shared_hobbies[2].name }}</h3>
+                    <p class="card-text">{{ site.data.hobbies.shared_hobbies[2].description }}</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-600);">
+                        Our favorite family activity together
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="{{ '/hobbies/' | relative_url }}" class="btn btn-primary">Discover Our Hobbies</a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="content-section">
+    <div class="container">
+        <h2 class="section-title">Latest Updates</h2>
+        <div class="blog-grid">
+            {% for post in site.posts limit:3 %}
+            <article class="blog-post-card">
+                {% if post.image %}
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-post-image" loading="lazy">
+                {% endif %}
+                <div class="blog-post-content">
+                    <h3 class="blog-post-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    <div class="blog-post-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %d, %Y" }}
+                        </time>
+                        {% if post.author %}
+                        <span>by {{ post.author }}</span>
+                        {% endif %}
+                    </div>
+                    <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="btn btn-secondary">Read More</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="content-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); padding: var(--spacing-xl) 0;">
+    <div class="container-narrow" style="text-align: center;">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">Stay Connected</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Follow along as we navigate life's adventures, share our stories, and prepare to welcome 
+            our newest family member. We'd love to have you join us on this journey!
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+            <a href="{{ '/gallery/' | relative_url }}" class="btn btn-primary btn-large">View Gallery</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-large">Read Our Blog</a>
+        </div>
+    </div>
+</section>

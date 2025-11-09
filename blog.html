@@ -1,0 +1,192 @@
+---
+layout: page
+title: Our Blog
+subtitle: Stories, updates, and adventures from the Bell-Torres family
+permalink: /blog/
+---
+
+<!-- Introduction -->
+<div class="container-narrow" style="text-align: center; margin-bottom: var(--spacing-xl);">
+    <p style="font-size: 1.2rem; color: var(--gray-700); line-height: 1.8;">
+        Welcome to our little corner of the internet where we share stories from our lives—travel adventures, 
+        hobby projects, family updates, and the everyday moments that make life meaningful.
+    </p>
+</div>
+
+<!-- Blog Posts Grid -->
+{% if site.posts.size > 0 %}
+<div class="blog-grid">
+    {% for post in site.posts %}
+    <article class="blog-post-card">
+        {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-post-image" loading="lazy">
+        {% endif %}
+        
+        <div class="blog-post-content">
+            <h3 class="blog-post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            
+            <div class="blog-post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </time>
+                {% if post.author %}
+                <span>by {{ post.author }}</span>
+                {% endif %}
+            </div>
+            
+            {% if post.categories %}
+            <div class="blog-post-meta" style="margin-top: var(--spacing-xs);">
+                {% for category in post.categories %}
+                <span class="category">{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+            
+            <a href="{{ post.url | relative_url }}" class="btn btn-secondary">Read More →</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<!-- Pagination (if needed in future) -->
+{% if paginator.total_pages > 1 %}
+<div style="text-align: center; margin-top: var(--spacing-xl);">
+    <div style="display: inline-flex; gap: var(--spacing-sm);">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-secondary">← Newer</a>
+        {% endif %}
+        
+        <span style="padding: var(--spacing-sm) var(--spacing-md); background: var(--gray-200); border-radius: var(--border-radius);">
+            Page {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="btn btn-secondary">Older →</a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+{% else %}
+<!-- No posts yet -->
+<div class="container-narrow" style="text-align: center; padding: var(--spacing-xl) 0;">
+    <div style="background: var(--neutral-light); padding: var(--spacing-xl); border-radius: var(--border-radius);">
+        <h2 style="margin-bottom: var(--spacing-md); color: var(--primary-color);">Coming Soon!</h2>
+        <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: var(--spacing-lg);">
+            We're working on our first blog posts. Check back soon for stories about our adventures, 
+            hobbies, and family life!
+        </p>
+        <p style="color: var(--gray-600);">
+            In the meantime, check out our <a href="{{ '/gallery/' | relative_url }}" style="color: var(--primary-color); font-weight: 600;">photo gallery</a> 
+            or learn more <a href="{{ '/about/' | relative_url }}" style="color: var(--primary-color); font-weight: 600;">about us</a>.
+        </p>
+    </div>
+</div>
+{% endif %}
+
+<!-- Blog Categories -->
+<div class="content-section" style="margin-top: var(--spacing-xxl); background: var(--neutral-light); padding: var(--spacing-xl) 0;">
+    <div class="container">
+        <h2 class="section-title">What You'll Find Here</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">✈️</h3>
+                    <h4 class="card-title">Travel Stories</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Detailed accounts of our adventures, travel tips, and destination guides
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">👨‍👩‍👦</h3>
+                    <h4 class="card-title">Family Updates</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Life updates, milestones, and the journey of growing our family
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🎨</h3>
+                    <h4 class="card-title">Hobby Projects</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Deep dives into our passions, from coffee brewing to crafting
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">💡</h3>
+                    <h4 class="card-title">Life Lessons</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Reflections, insights, and things we're learning along the way
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🏡</h3>
+                    <h4 class="card-title">Home & DIY</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Home improvement projects, organization tips, and making our space ours
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🐕</h3>
+                    <h4 class="card-title">Dax's Adventures</h4>
+                    <p style="margin: 0; color: var(--gray-700);">
+                        Stories about our beloved lab and his hilarious antics
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How to Add Posts -->
+<div class="content-section">
+    <div class="container-narrow" style="background: var(--primary-color); color: var(--white); padding: var(--spacing-lg); border-radius: var(--border-radius); text-align: center;">
+        <h3 style="color: var(--white); margin-bottom: var(--spacing-md);">✍️ Want to Add a Blog Post?</h3>
+        <p style="opacity: 0.95; margin-bottom: var(--spacing-md);">
+            Creating a new blog post is easy! Just create a new file in the <code style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.5rem; border-radius: 4px;">_posts/</code> folder with the format <code style="background: rgba(255,255,255,0.2); padding: 0.25rem 0.5rem; border-radius: 4px;">YYYY-MM-DD-title.md</code>
+        </p>
+        <p style="opacity: 0.95; margin: 0;">
+            Check the README file for detailed instructions and a blog post template.
+        </p>
+    </div>
+</div>
+
+<!-- Subscribe/Follow Section -->
+<div class="content-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); padding: var(--spacing-xl) 0; text-align: center;">
+    <div class="container-narrow">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">Stay Updated</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Want to be notified when we publish new posts? Follow us on social media or check back regularly 
+            for new stories and updates!
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+            {% if site.social.instagram %}
+            <a href="https://instagram.com/{{ site.social.instagram }}" 
+               class="btn btn-primary btn-large" 
+               target="_blank" 
+               rel="noopener">
+                Follow on Instagram
+            </a>
+            {% endif %}
+            <a href="{{ '/gallery/' | relative_url }}" class="btn btn-secondary btn-large">View Gallery</a>
+        </div>
+    </div>
+</div>

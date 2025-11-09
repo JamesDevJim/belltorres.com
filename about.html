@@ -1,0 +1,183 @@
+---
+layout: page
+title: About Us
+subtitle: The Bell-Torres Family Story
+permalink: /about/
+---
+
+<!-- Family Story Section -->
+<div class="container-narrow">
+    <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--gray-700);">
+            {{ site.data.family.family_story }}
+        </p>
+    </div>
+</div>
+
+<!-- Location Info -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-xxl);">
+    <div class="container-narrow" style="text-align: center;">
+        <h3 style="margin-bottom: var(--spacing-md);">📍 Home Base</h3>
+        <p style="font-size: 1.2rem; color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
+            {{ site.data.family.location.city }}, {{ site.data.family.location.state }}
+        </p>
+        <p style="color: var(--gray-700);">
+            {{ site.data.family.location.description }}
+        </p>
+    </div>
+</div>
+
+<!-- Family Members -->
+<div class="content-section">
+    <h2 class="section-title">Meet the Family</h2>
+    
+    {% for member in site.data.family.members %}
+    <div class="family-member" style="margin-bottom: var(--spacing-lg);">
+        <div class="member-header">
+            <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" class="member-image" loading="lazy">
+            <div class="member-info">
+                <h3>{{ member.name }}</h3>
+                <p class="member-role">{{ member.role }}</p>
+            </div>
+        </div>
+        
+        <p style="margin-bottom: var(--spacing-md); line-height: 1.8;">{{ member.bio }}</p>
+        
+        {% if member.interests %}
+        <div style="margin-top: var(--spacing-md);">
+            <h4 style="font-size: 1.1rem; margin-bottom: var(--spacing-sm); color: var(--primary-color);">
+                Interests & Passions
+            </h4>
+            <div class="member-interests">
+                {% for interest in member.interests %}
+                <div class="interest-item">
+                    <span class="interest-icon">{{ interest.icon }}</span>
+                    <div>
+                        <strong>{{ interest.name }}</strong>
+                        <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;">
+                            {{ interest.description }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Family Stats / Fun Facts -->
+<div class="content-section" style="background: var(--neutral-light); padding: var(--spacing-xl) 0; margin-top: var(--spacing-xxl);">
+    <div class="container">
+        <h2 class="section-title">By the Numbers</h2>
+        <div class="card-grid">
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.travels.stats.states_visited }}
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600;">States Visited</p>
+                    <p style="color: var(--gray-600); margin: 0;">And counting...</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.travels.stats.countries_visited }}
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600;">Countries Explored</p>
+                    <p style="color: var(--gray-600); margin: 0;">More on the bucket list</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);">
+                        {{ site.data.travels.stats.national_parks }}
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600;">National Parks</p>
+                    <p style="color: var(--gray-600); margin: 0;">Nature lovers at heart</p>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div class="card-content">
+                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: var(--spacing-sm);">
+                        ∞
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600;">Adventures Ahead</p>
+                    <p style="color: var(--gray-600); margin: 0;">The best is yet to come</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- What Makes Us Unique -->
+<div class="content-section">
+    <div class="container-narrow">
+        <h2 class="section-title">What Makes Us, Us</h2>
+        
+        <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🌱 Sustainability First</h3>
+            <p>
+                We believe in living responsibly and making choices that benefit our planet. From James's work 
+                in building energy efficiency to our everyday lifestyle choices, we're committed to leaving 
+                the world better than we found it.
+            </p>
+        </div>
+        
+        <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🎨 Creativity & Expression</h3>
+            <p>
+                Whether it's through Namibia's arts and crafts, our home projects, or the way we approach 
+                problem-solving, creativity flows through everything we do. We believe in making beautiful 
+                things and finding unique solutions.
+            </p>
+        </div>
+        
+        <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">⚡ Active Living</h3>
+            <p>
+                From tennis courts to dance floors, from mountain trails to ocean waves, we love moving 
+                our bodies and pushing our limits. Physical activity isn't just exercise for us—it's how 
+                we connect with each other and the world around us.
+            </p>
+        </div>
+        
+        <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🧘‍♀️ Mindful Growth</h3>
+            <p>
+                We're always learning, always growing, always seeking to understand ourselves and the world 
+                better. From spiritual practices to coffee science, from technical skills to emotional 
+                intelligence, growth is a lifelong journey we embrace together.
+            </p>
+        </div>
+        
+        <div style="margin-bottom: var(--spacing-lg);">
+            <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-sm);">🐕 Family First</h3>
+            <p>
+                At the end of the day, it's all about family—whether that's each other, Dax, our soon-to-arrive 
+                baby, or the extended family and friends who make life meaningful. Love, connection, and 
+                presence are what matter most.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="content-section" style="background: var(--primary-color); color: var(--white); padding: var(--spacing-xl) 0; text-align: center;">
+    <div class="container-narrow">
+        <h2 style="color: var(--white); margin-bottom: var(--spacing-md);">Want to See More?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: var(--spacing-lg); opacity: 0.95;">
+            Explore our adventures, check out our hobbies, or follow along with our latest life updates.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+            <a href="{{ '/travel/' | relative_url }}" class="btn btn-secondary btn-large">Travel Adventures</a>
+            <a href="{{ '/hobbies/' | relative_url }}" class="btn btn-secondary btn-large">Our Hobbies</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-large">Read Our Blog</a>
+        </div>
+    </div>
+</div>
