@@ -4,7 +4,7 @@
 title: "Bell-Torres Family"
 description: "Welcome to the Bell-Torres family website - sharing our adventures, hobbies, and life in San Diego"
 url: "https://belltorres.com"
-baseurl: "/belltorres.com"
+baseurl: ""
 
 # Author Information (used in blog posts and SEO)
 author:

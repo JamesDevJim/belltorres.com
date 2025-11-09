@@ -21,10 +21,13 @@ members:
         description: "Building tools that make a difference"
     
   - name: "Namibia Bell-Torres"
-    role: "Creative Spirit & Artist"
-    bio: "Namibia brings creativity and spirituality into everything she does. Whether she's crafting beautiful handmade pieces, dancing salsa with passion, or diving deep into spiritual exploration, she approaches life with curiosity and grace. Her love for reading opens new worlds, while her artistic talents bring beauty into our home and lives."
+    role: "Software Engineer & Creative Spirit"
+    bio: "Namibia combines a love for technology with a passion for creativity and spirituality. As a software engineer, she enjoys building elegant solutions to complex problems. Outside of coding, she expresses her creativity through beautiful handmade pieces, dancing salsa with passion, or diving deep into spiritual exploration. Her love for reading opens new worlds, while her artistic talents bring beauty into our home and lives."
     image: "/assets/images/family/namibia.jpg"
     interests:
+      - name: "Software Development"
+        icon: "💻"
+        description: "Building elegant and impactful software"
       - name: "Arts & Crafts"
         icon: "🎨"
         description: "Creating beautiful handmade treasures"
@@ -75,7 +78,7 @@ members:
 family_story: |
   We're the Bell-Torres family, living our best life in sunny San Diego, California. Our story is one of adventure, passion, and continuous growth.
   
-  James and Namibia met through their shared love of adventure and complementary passions - his analytical mind and her creative spirit creating the perfect balance. Together, we've built a life filled with meaningful work, exciting hobbies, and the kind of love that makes every day an adventure.
+  James and Namibia met through their shared love of adventure and complementary passions - his analytical mind and her creative, technical spirit creating the perfect balance. Together, we've built a life filled with meaningful work, exciting hobbies, and the kind of love that makes every day an adventure.
   
   Dax joined our family as a puppy and immediately claimed his spot as the heart of our home. His unconditional love and boundless enthusiasm remind us daily to find joy in the simple things - a good walk, a warm sunny spot, or quality time with the people you love.
   

@@ -52,6 +52,18 @@ james_hobbies:
     image: "/assets/images/hobbies/technology.jpg"
 
 namibia_hobbies:
+  - name: "Software Development"
+    icon: "💻"
+    description: "Building elegant and impactful software solutions"
+    level: "Professional"
+    details: "As a software engineer, Namibia is passionate about using technology to build products that are both beautiful and functional. She enjoys the process of turning a complex problem into a clean, user-friendly application. Her work is a blend of logical problem-solving and creative design, allowing her to bridge her technical and artistic skills."
+    specialties:
+      - "Full-Stack Web Development"
+      - "User Interface Design"
+      - "API Integration"
+    favorite_stack: "React, Node.js, TypeScript"
+    image: "/assets/images/hobbies/software.jpg"
+
   - name: "Arts & Crafts"
     icon: "🎨"
     description: "Creating beauty through handmade treasures"
