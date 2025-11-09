@@ -354,7 +354,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: url('/assets/images/hero-family.jpg') center/cover no-repeat;
     color: var(--white);
     overflow: hidden;
 }
@@ -366,8 +366,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/assets/images/hero-family.jpg') center/cover no-repeat;
-    opacity: 0.2;
+    background: rgba(0, 0, 0, 0.3); /* Adds a dark overlay for text readability */
 }
 
 .hero-content {
